@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browser Alp - Bring a new browser experience</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    .btn-primary {
+        --bs-btn-color: #000;
+        --bs-btn-bg: #98E2C6;
+        --bs-btn-border-color: #8cd2b7;
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: #85c3ac;
+        --bs-btn-hover-border-color: #83c3ab;
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #000;
+        --bs-btn-active-bg: #8ac9b1;
+        --bs-btn-active-border-color: #6fa38f;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: #afdbca;
+        --bs-btn-disabled-border-color: #bfe7d8;
+
+        text-transform: capitalize;
+    }
+
+    .btn-outline-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: transparent;
+        --bs-btn-border-color: #8cd2b7;
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: #d2f5e8;
+        --bs-btn-hover-border-color: #83c3ab;
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #8ac9b1;
+        --bs-btn-active-border-color: #6fa38f;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #afdbca;
+        --bs-btn-disabled-border-color: #bfe7d8;
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-link-active-bg: #98e2c6;
+        color: #000 !important;
+    }
+    .bg-primary {
+        background-color: #98E2C6 !important;
+        color: #000 !important;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif !important;
+      overflow-x: hidden !important;
+    }
+
+
+    :root {
+      --bs-body-bg: #1e272e !important;
+      --bs-primary: #98e2c6 !important;
+    }
+
+    nav.navbar {
+      border-radius: 200px;
+      margin: 20px;
+      transition: 0.2s all;
+      backdrop-filter: blur(10px) !important;
+    }
+
+    nav.navbar.scrolled {
+      border-radius: 0 !important;
+      margin: 0 !important;
+      transition: 0.2s all;
+    }
+    
+    @keyframes rotation {
+      0% {
+        transform: rotateZ(0deg) scale(0.5,0.5);
+      }
+
+      50% {
+        transform: scale(1,1);
+      }
+
+      100% {
+        transform: rotateZ(360deg) scale(0.5,0.5);
+      }
+    }
+
+    .myAlert {
+      padding: 16px;
+      background: #41228e;
+      color: #fff;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .text-bg-primary {
+      background-color: #98E2C6 !important;
+      color: #000 !important;
+    }
+
+    .footered {
+      font-size: 1.5em;
+      color: #98E2C6;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .footered img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  </style>
+</head>
+  <body>
+    <div class="myAlert"><b>Note: </b> This is a seperate page from <a href="../">homepage</a>. Go there if you wanted to.</div>
+    <nav class="navbar sticky-top" data-bs-theme="dark" style="background: rgba(var(--bs-dark-rgb), 70%) !important;">
+        <div class="container-fluid px-5 py-2">
+          <a class="navbar-brand" href="#">
+            <img src="assets/logoFull.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            Browser Alp <span class="badge text-bg-primary">BETA</span>
+          </a>
+
+          <div id="navbarSupportedContent">
+            <a href="#downloadSection" class="btn btn-primary">Download</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mx-6 px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6" style="position: relative;">
+            <img src="assets/screenshot.png" style="filter:blur(50px);position:absolute;top:-20px;z-index:-1;animation:rotation 5s infinite;aspect-ratio: 1;" class="d-block mx-lg-auto img-fluid" alt="Browser Alp Interface" height="500" loading="lazy">
+            <img src="assets/screenshot.png" class="d-block mx-lg-auto img-fluid" alt="Browser Alp Interface" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Bring a new browser experience</h1>
+            <p class="lead">Meet the first real developer browser. Faster, easy and use developer tools at a glance.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <a href="#downloadSection" class="btn btn-primary btn-lg download-button-1"> Download Now!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-4">
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="p-5 mb-4 rounded-3 text-bg-dark" style="background:rgb(0 0 0 / 25%) !important;">
+                    <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Design</h1>
+                    <p class="col-md-8 fs-4">The page content is always needed to being bigger, everytime. With our vertical tab design, page content takes up nearly every pixel of the screen.</p>
+                    <button class="btn btn-warning btn-lg" type="button">&lt;ProductHunt&gt;</button><br/><br/>
+                    <em>Calculated ~89.3% in full laptop screen. Can change across different devices.</em>
+                    </div>
+                </div>
+                <div class="p-4 mb-4 rounded-3 text-bg-dark" style="background:rgb(0 0 0 / 25%) !important;">
+                  <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">Customizing</h1>
+                  <p class="col-md-8 fs-4">This browser allows you to fully customize the design to your preferences, giving you complete control over your browsing experience with your own choices of designs!</p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 mb-4 rounded-3 text-bg-dark" style="background:rgb(0 0 0 / 25%) !important;">
+                    <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Split view</h1>
+                    <p class="col-md-8 fs-4">You can see two pages in a tab just one click of <span><i class="bi bi-layout-split" style="color: #98E2C6;"></i></span> button.</p>
+                </div>
+                </div>
+                <div class="p-5 mb-4 rounded-3 text-bg-dark" style="background:rgb(0 0 0 / 25%) !important;">
+                    <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Code Playground</h1>
+                    <p class="col-md-8 fs-4">A special feature for web developers, coding feature. With (again) just one click, you can test your code with Code Playground!</p>
+                    <em>In development on web coding.</em>
+                    </div>
+                </div>
+                <div class="p-3 mb-4 rounded-3 text-bg-dark" style="background:rgb(0 0 0 / 25%) !important;">
+                  <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">See On ProductHunt</h1>
+                  <p class="col-md-8 fs-4"><button class="btn btn-warning btn-lg" type="button">&lt;ProductHunt&gt;</button></p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="px-4 py-5 my-5 text-center" id="downloadSection">
+        <div class="mx-auto m-4 p-2" style="border-radius: 50%;aspect-ratio:1;width:2.5em;height:2.5em;font-size:2em;background:var(--bs-primary);color:rgb(var(--bs-dark-rgb));display:flex;justify-content: center;align-items: center;"><i class="bi bi-download"></i></div>
+        <h1 class="display-5 fw-bold">Download Now</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Download for Windows, macOS and Linux, all free!</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" id="downlableSectionButtons">
+            <a id="downloadWindows" class="btn btn-lg px-4 gap-3">Windows</a>
+            <a id="downloadMacos" class="btn btn-lg px-4 toastBtn1">macOS</a>
+            <a id="downloadLinux" class="btn btn-lg px-4 toastBtn2">Linux</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center pt-3 mt-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <img src="assets/logoFull.png" height="30" width="30">
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">Browser Alp <span class="badge text-bg-primary">BETA</span> <button class="btn btn-warning" type="button">&lt;ProductHunt&gt;</button></span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#">Creator</a></li>
+            <li class="ms-3"><a class="text-muted" href="#">Github Page</a></li>
+            <li class="ms-3"><a class="text-muted" href="#">Trailer</a></li>
+          </ul>
+        </footer>
+        <div class="footered">
+          <img src="assets/logoMini.svg"/>
+        </div>
+        <br/>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast text-bg-primary" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="assets/LogoSmall.svg" class="me-2">
+            <strong class="me-auto">Not Available</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Downloading is only available on Windows. Hope to some developers makes the macOS and Linux version :)
+          </div>
+        </div>
+      </div>
+      
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+</body>
+</html>
