@@ -61,3 +61,20 @@ if (toastTrigger2) {
     toastBootstrap.show()
   })
 }
+
+setInterval(isPlaying,500);
+
+function isPlaying() {
+  var modal = document.getElementById("trailerModal");
+  var video = document.querySelector("#trailerModal #video");
+
+  if(modal.style.display == "none") {
+    if(!video.paused) {
+      video.pause();
+    }
+  }else if(modal.style.display == "block") {
+    if(!video.playing) {
+      video.play();
+    }
+  }
+}
