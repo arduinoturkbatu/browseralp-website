@@ -147,6 +147,7 @@
             <p class="lead">Meet the first real developer browser. Faster, easy and use developer tools at a glance.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <a href="#downloadSection" class="btn btn-primary btn-lg download-button-1"> Download Now!</a>
+              <button class="btn btn-outline-primary btn-lg" id="trailerButton" data-bs-toggle="modal" data-bs-target="#trailerModal"> Watch Trailer</button>
             </div>
           </div>
         </div>
@@ -215,7 +216,7 @@
             </a>
             <span class="mb-3 mb-md-0 text-muted">Browser Alp <span class="badge text-bg-primary">BETA</span></span>
           </div>
-      
+             
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3"><a class="text-muted" href="#">Creator</a></li>
             <li class="ms-3"><a class="text-muted" href="#">Github Page</a></li>
@@ -240,6 +241,20 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true" style="display:none">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="trailerModalLabel">Watch Trailer</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding:0;overflow:hidden;">
+        <video src="assets/trailer.mp4" id="video" width="100%" height="100%" controls></video>
+      </div>
+    </div>
+  </div>
+</div>
       
   
 
